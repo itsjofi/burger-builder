@@ -1,12 +1,24 @@
 import React from "react";
+import styled from "styled-components";
 
 import burgerLogo from "../../assets/images/burger-logo.png";
-import classes from "./Logo.module.css";
+
+const Div = styled.div`
+  background-color: white;
+  padding: 8px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+`;
+
+const Img = styled.img`
+  height: 100%;
+`;
 
 const logo = props => (
-  <div className={classes.Logo} style={{ height: props.height }}>
-    <img src={burgerLogo} alt="MyBurger" />
-  </div>
+  <Div style={{ height: props.height }}>
+    <Img src={burgerLogo} alt="MyBurger" />
+  </Div>
 );
 
 export default logo;
